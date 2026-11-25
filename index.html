@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dikrisa International School, Abuja | Creche, Nursery, Primary &amp; Secondary</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 54'%3E%3Cpath d='M24 3L43 9.5V25.5C43 37.5 34.8 46.7 24 51C13.2 46.7 5 37.5 5 25.5V9.5L24 3Z' fill='%231D4ED8'/%3E%3Cpath d='M17.5 22.5C19.8 21.5 22 22 24 23.6C26 22 28.2 21.5 30.5 22.5V31.5C28.2 30.5 26 31 24 32.5C22 31 19.8 30.5 17.5 31.5V22.5Z' fill='%23FFFFFF'/%3E%3C/svg%3E" />
+    <meta name="description"
+        content="Admission is on at Dikrisa International School in Gudu/Apo, Abuja. Offering Creche, Nursery, Primary, and Secondary education with small class sizes, qualified teachers, and moral + academic excellence." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ==========================================================================
+       Dikrisa International School, Abuja - Editorial Blue & White Design System
+       ========================================================================== */
+
+        :root {
+            --blue-50: #eff6ff;
+            --blue-100: #dbeafe;
+            --blue-200: #bfdbfe;
+            --blue-600: #2563eb;
+            --blue-700: #1d4ed8;
+            --blue-800: #1e40af;
+            --blue-900: #1e3a8a;
+            --blue-950: #0f1f4b;
+
+            --white: #ffffff;
+            --ivory: #f8faff;
+            --stone-100: #eef2f8;
+            --border-light: #dde6f3;
+            --border-subtle: #e5e7eb;
+
+            --ink-900: #18181b;
+            --ink-700: #3f3f46;
+            --ink-500: #6b7280;
+            --gold-accent: #d97706;
+
+            --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+            --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+            --shadow-sm: 0 2px 8px rgba(24, 24, 27, 0.05);
+            --shadow-md: 0 12px 30px rgba(24, 24, 27, 0.08);
+            --shadow-lg: 0 24px 50px rgba(30, 58, 138, 0.14);
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 84px;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-sans);
+            color: var(--ink-900);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: clip;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1160px, 100% - 2.5rem);
+            margin-inline: auto;
+        }
+
+        .icon-xs {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        .icon-sm {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .icon-md {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .text-blue {
+            color: var(--blue-700);
+        }
+
+        /* ==========================================================================
+       1. Top Bar
+       ========================================================================== */
+
+        .top-bar {
+            background-color: var(--blue-900);
+            color: var(--white);
+            font-size: 0.84rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .top-bar__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding-block: 0.55rem;
+            flex-wrap: wrap;
+        }
+
+        .top-bar__location,
+        .top-bar__phones {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .top-bar__badge {
+            color: #fde68a;
+            font-weight: 600;
+        }
+
+        .top-bar__sep {
+            opacity: 0.55;
+        }
+
+        .top-bar__call-label {
+            opacity: 0.88;
+        }
+
+        .top-bar__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-weight: 700;
+            color: var(--white);
+            white-space: nowrap;
+            transition: opacity 0.18s ease;
+        }
+
+        .top-bar__link:hover {
+            opacity: 0.85;
+            text-decoration: underline;
+        }
+
+        /* ==========================================================================
+       2. Header & Navigation
+       ========================================================================== */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-light);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .site-header.is-scrolled {
+            box-shadow: 0 6px 24px rgba(24, 24, 27, 0.08);
+        }
+
+        .header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            min-height: 76px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .brand__crest {
+            width: 42px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+
+        .brand__text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand__name {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--ink-900);
+        }
+
+        .brand__sub {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--blue-700);
+            letter-spacing: 0.01em;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 1.65rem;
+        }
+
+        .nav__link {
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: var(--ink-700);
+            transition: color 0.18s ease;
+        }
+
+        .nav__link:hover,
+        .nav__link:focus-visible {
+            color: var(--blue-700);
+        }
+
+        .header__actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 42px;
+            height: 42px;
+            padding: 0 9px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            background: var(--white);
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: var(--ink-900);
+            border-radius: 2px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .drawer-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 190;
+            background: rgba(24, 24, 27, 0.48);
+            backdrop-filter: blur(2px);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.28s ease, visibility 0.28s ease;
+        }
+
+        .drawer-backdrop.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .side-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 200;
+            width: min(85vw, 336px);
+            background: var(--white);
+            border-left: 4px solid var(--blue-700);
+            box-shadow: -16px 0 40px rgba(24, 24, 27, 0.18);
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            visibility: hidden;
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.3s ease;
+        }
+
+        .side-drawer.is-open {
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        body.drawer-open {
+            overflow: hidden;
+        }
+
+        .side-drawer__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 1.05rem 1.25rem;
+            border-bottom: 1px solid var(--border-light);
+            background: var(--ivory);
+        }
+
+        .side-drawer__brand {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+
+        .side-drawer__brand .brand__crest {
+            width: 32px;
+            height: 36px;
+        }
+
+        .side-drawer__title {
+            font-family: var(--font-display);
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--ink-900);
+            line-height: 1.2;
+        }
+
+        .side-drawer__sub {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--blue-700);
+        }
+
+        .side-drawer__close {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+            background: var(--white);
+            color: var(--ink-900);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: background-color 0.16s ease, color 0.16s ease;
+        }
+
+        .side-drawer__close:hover,
+        .side-drawer__close:focus-visible {
+            background: var(--blue-50);
+            color: var(--blue-700);
+        }
+
+        .side-drawer__nav {
+            display: flex;
+            flex-direction: column;
+            padding: 0.75rem 1.25rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .side-drawer__link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.9rem 0.25rem;
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: var(--ink-900);
+            border-bottom: 1px solid var(--stone-100);
+            transition: color 0.16s ease, padding-left 0.16s ease;
+        }
+
+        .side-drawer__link:hover,
+        .side-drawer__link:focus-visible {
+            color: var(--blue-700);
+            padding-left: 0.3rem;
+        }
+
+        .side-drawer__link span[aria-hidden="true"] {
+            color: var(--blue-700);
+            font-size: 1.15rem;
+            line-height: 1;
+        }
+
+        .side-drawer__footer {
+            padding: 1.15rem 1.25rem 1.4rem;
+            border-top: 1px solid var(--border-light);
+            background: var(--ivory);
+            display: grid;
+            gap: 0.65rem;
+        }
+
+        .side-drawer__phones {
+            font-size: 0.82rem;
+            color: var(--ink-700);
+            text-align: center;
+            margin-bottom: 0.15rem;
+        }
+
+        .side-drawer__phones a {
+            font-weight: 700;
+            color: var(--blue-700);
+            white-space: nowrap;
+        }
+
+        /* ==========================================================================
+       Buttons
+       ========================================================================== */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.55rem;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            border: 1.5px solid transparent;
+            cursor: pointer;
+            transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease,
+                transform 0.15s ease, box-shadow 0.18s ease;
+            text-align: center;
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn--sm {
+            padding: 0.55rem 1.05rem;
+            font-size: 0.88rem;
+        }
+
+        .btn--lg {
+            padding: 0.9rem 1.55rem;
+            font-size: 0.98rem;
+        }
+
+        .btn--full {
+            width: 100%;
+        }
+
+        .btn--primary {
+            background-color: var(--blue-700);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(29, 78, 216, 0.24);
+        }
+
+        .btn--primary:hover,
+        .btn--primary:focus-visible {
+            background-color: var(--blue-800);
+            box-shadow: 0 10px 24px rgba(30, 64, 175, 0.32);
+        }
+
+        .btn--outline {
+            background-color: var(--white);
+            color: var(--blue-700);
+            border-color: var(--blue-700);
+        }
+
+        .btn--outline:hover,
+        .btn--outline:focus-visible {
+            background-color: var(--blue-50);
+        }
+
+        .btn--white {
+            background-color: var(--white);
+            color: var(--blue-800);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+        }
+
+        .btn--white:hover,
+        .btn--white:focus-visible {
+            background-color: var(--blue-50);
+        }
+
+        /* ==========================================================================
+       3. Hero Section
+       ========================================================================== */
+
+        .hero {
+            position: relative;
+            padding-block: clamp(2.8rem, 5.5vw, 4.75rem);
+            background: radial-gradient(circle at 90% 10%, rgba(29, 78, 216, 0.06), transparent 44%),
+                linear-gradient(180deg, var(--white) 0%, var(--ivory) 100%);
+            overflow: hidden;
+        }
+
+        .hero__grid {
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+            align-items: center;
+            gap: clamp(2rem, 4.5vw, 4rem);
+        }
+
+        .eyebrow-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.42rem 0.95rem;
+            background-color: var(--blue-50);
+            border: 1px solid var(--blue-200);
+            color: var(--blue-800);
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--blue-600);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
+        }
+
+        .hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0 0 1.15rem;
+            color: var(--ink-900);
+        }
+
+        .hero__subtitle {
+            font-size: clamp(1.02rem, 1.4vw, 1.15rem);
+            color: var(--ink-700);
+            max-width: 56ch;
+            margin: 0 0 1.8rem;
+        }
+
+        .hero__actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            margin-bottom: 2.25rem;
+        }
+
+        .hero__facts {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .hero-fact strong {
+            display: block;
+            font-size: 0.96rem;
+            color: var(--ink-900);
+        }
+
+        .hero-fact span {
+            font-size: 0.83rem;
+            color: var(--ink-500);
+        }
+
+        .hero__visual {
+            position: relative;
+        }
+
+        .hero-photo-frame {
+            position: relative;
+            padding: 0.7rem;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-photo-frame::before {
+            content: "";
+            position: absolute;
+            inset: -12px -12px auto auto;
+            width: 110px;
+            height: 110px;
+            border-top: 4px solid var(--blue-700);
+            border-right: 4px solid var(--blue-700);
+            border-top-right-radius: 22px;
+            pointer-events: none;
+        }
+
+        .hero-photo-frame__img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: calc(var(--radius-lg) - 6px);
+        }
+
+        .hero-photo-card {
+            margin-top: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.85rem 1rem;
+            background: var(--ivory);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--blue-700);
+            border-radius: var(--radius-md);
+        }
+
+        .hero-photo-card__icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--blue-50);
+            color: var(--blue-700);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .hero-photo-card__icon svg {
+            width: 21px;
+            height: 21px;
+        }
+
+        .hero-photo-card__title {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--ink-900);
+        }
+
+        .hero-photo-card__meta {
+            margin: 0.1rem 0 0;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--blue-700);
+        }
+
+        /* ==========================================================================
+       Shared Section Styles
+       ========================================================================== */
+
+        .section {
+            padding-block: clamp(3.5rem, 6vw, 5.25rem);
+        }
+
+        .section--tinted {
+            background-color: var(--ivory);
+            border-block: 1px solid var(--border-light);
+        }
+
+        .section--blue {
+            background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 58%, #142a6b 100%);
+            color: var(--white);
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--blue-700);
+            margin-bottom: 0.65rem;
+        }
+
+        .section-eyebrow--light {
+            color: #bfdbfe;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 3.1vw, 2.45rem);
+            line-height: 1.18;
+            font-weight: 700;
+            margin: 0 0 1rem;
+            color: var(--ink-900);
+        }
+
+        .section-title--light {
+            color: var(--white);
+        }
+
+        .section-lead {
+            font-size: 1.02rem;
+            color: var(--ink-700);
+            margin: 0 0 1.85rem;
+        }
+
+        .section-header--split {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 1.5rem;
+            margin-bottom: 2.3rem;
+            flex-wrap: wrap;
+        }
+
+        .section-header__note {
+            max-width: 44ch;
+            margin: 0;
+            color: var(--ink-700);
+        }
+
+        /* ==========================================================================
+       4. About Section
+       ========================================================================== */
+
+        .about__layout {
+            display: grid;
+            grid-template-columns: 0.92fr 1.08fr;
+            align-items: center;
+            gap: clamp(2rem, 4.5vw, 3.75rem);
+        }
+
+        .editorial-frame {
+            background: var(--white);
+            padding: 0.65rem;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .editorial-frame__img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: calc(var(--radius-lg) - 6px);
+        }
+
+        .editorial-frame__caption {
+            padding: 0.75rem 0.6rem 0.25rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--ink-500);
+        }
+
+        .pillars-grid {
+            display: grid;
+            gap: 0.95rem;
+        }
+
+        .pillar-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.1rem 1.2rem;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--blue-700);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pillar-card__icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--blue-50);
+            color: var(--blue-700);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .pillar-card__icon svg {
+            width: 21px;
+            height: 21px;
+        }
+
+        .pillar-card__title {
+            margin: 0 0 0.25rem;
+            font-size: 1.03rem;
+            font-weight: 700;
+            color: var(--ink-900);
+        }
+
+        .pillar-card__text {
+            margin: 0;
+            font-size: 0.92rem;
+            color: var(--ink-700);
+        }
+
+        /* ==========================================================================
+       5. Programs Section
+       ========================================================================== */
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .program-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1.45rem;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-top: 4px solid var(--blue-700);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .program-card__head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .program-card__tag {
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--blue-800);
+            background: var(--blue-50);
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+        }
+
+        .program-card__num {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--blue-200);
+        }
+
+        .program-card__title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            margin: 0 0 0.55rem;
+            color: var(--ink-900);
+        }
+
+        .program-card__text {
+            margin: 0 0 1.25rem;
+            font-size: 0.92rem;
+            color: var(--ink-700);
+            flex-grow: 1;
+        }
+
+        .program-card__link {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--blue-700);
+        }
+
+        .program-card__link:hover {
+            text-decoration: underline;
+        }
+
+        .campus-carousel {
+            margin-top: 2.35rem;
+            background: var(--ivory);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: clamp(1.1rem, 2.5vw, 1.65rem);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .campus-carousel__topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.1rem;
+            flex-wrap: wrap;
+        }
+
+        .campus-carousel__label {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--blue-700);
+            display: block;
+        }
+
+        .campus-carousel__heading {
+            margin: 0.15rem 0 0;
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--ink-900);
+        }
+
+        .campus-carousel__controls {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+
+        .campus-carousel__counter {
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: var(--ink-500);
+            min-width: 3.5rem;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .carousel-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1.5px solid var(--border-light);
+            background: var(--white);
+            color: var(--blue-700);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease, transform 0.14s ease;
+        }
+
+        .carousel-btn:hover,
+        .carousel-btn:focus-visible {
+            background: var(--blue-700);
+            border-color: var(--blue-700);
+            color: var(--white);
+        }
+
+        .carousel-btn:active {
+            transform: scale(0.95);
+        }
+
+        .carousel-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .campus-carousel__viewport {
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            background: var(--white);
+            border: 1px solid var(--border-light);
+        }
+
+        .campus-carousel__track {
+            display: flex;
+            transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: 1.18fr 0.82fr;
+            align-items: stretch;
+        }
+
+        .carousel-slide__media {
+            position: relative;
+            background: var(--stone-100);
+        }
+
+        .carousel-slide__media img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+        }
+
+        .carousel-slide__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(1.35rem, 3vw, 2.25rem);
+            background: var(--white);
+            border-left: 1px solid var(--border-light);
+        }
+
+        .carousel-slide__badge {
+            display: inline-block;
+            align-self: flex-start;
+            padding: 0.28rem 0.72rem;
+            border-radius: 999px;
+            background: var(--blue-50);
+            color: var(--blue-800);
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 0.85rem;
+        }
+
+        .carousel-slide__title {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+            line-height: 1.22;
+            margin: 0 0 0.7rem;
+            color: var(--ink-900);
+        }
+
+        .carousel-slide__text {
+            margin: 0 0 1.25rem;
+            font-size: 0.95rem;
+            color: var(--ink-700);
+        }
+
+        .carousel-slide__cta {
+            align-self: flex-start;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--blue-700);
+        }
+
+        .carousel-slide__cta:hover {
+            text-decoration: underline;
+        }
+
+        .campus-carousel__dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .carousel-dot {
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            border: 0;
+            border-radius: 999px;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: width 0.22s ease, background-color 0.22s ease;
+        }
+
+        .carousel-dot.is-active {
+            width: 28px;
+            background: var(--blue-700);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .campus-carousel__track,
+            .side-drawer,
+            .drawer-backdrop {
+                transition: none;
+            }
+        }
+
+        /* ==========================================================================
+       6. Why Choose Us Section
+       ========================================================================== */
+
+        .why__layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: clamp(2rem, 4.5vw, 4rem);
+            align-items: start;
+        }
+
+        .why__lead {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 0 1.9rem;
+            font-size: 1.02rem;
+        }
+
+        .why-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 0.95rem;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.95rem;
+            padding: 1.05rem 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: var(--radius-md);
+        }
+
+        .why-item__check {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--white);
+            color: var(--blue-800);
+            font-weight: 800;
+            font-size: 0.9rem;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .why-item h3 {
+            margin: 0 0 0.2rem;
+            font-size: 1.03rem;
+            color: var(--white);
+        }
+
+        .why-item p {
+            margin: 0;
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        /* ==========================================================================
+       7. Admissions Section & Form
+       ========================================================================== */
+
+        .admissions__layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(2rem, 4.5vw, 4rem);
+            align-items: start;
+        }
+
+        .admissions-steps {
+            list-style: none;
+            margin: 0 0 1.75rem;
+            padding: 0;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .admissions-steps li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+        }
+
+        .admissions-steps__num {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--blue-700);
+            color: var(--white);
+            font-size: 0.88rem;
+            font-weight: 800;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .admissions-steps strong {
+            display: block;
+            color: var(--ink-900);
+        }
+
+        .admissions-steps p {
+            margin: 0.15rem 0 0;
+            font-size: 0.92rem;
+            color: var(--ink-700);
+        }
+
+        .direct-call-box {
+            padding: 1.05rem 1.25rem;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--blue-700);
+            border-radius: var(--radius-md);
+        }
+
+        .direct-call-box__label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--ink-500);
+            margin-bottom: 0.25rem;
+        }
+
+        .direct-call-box__numbers {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.65rem;
+            font-size: 1.08rem;
+            font-weight: 800;
+            color: var(--blue-700);
+        }
+
+        .direct-call-box__numbers a {
+            white-space: nowrap;
+        }
+
+        .direct-call-box__numbers a:hover {
+            text-decoration: underline;
+        }
+
+        .admissions-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .admissions-card__accent {
+            height: 6px;
+            background: linear-gradient(90deg, var(--blue-800), var(--blue-600));
+        }
+
+        .admissions-card__body {
+            padding: clamp(1.5rem, 3vw, 2.2rem);
+        }
+
+        .admissions-card__title {
+            font-family: var(--font-display);
+            font-size: 1.45rem;
+            margin: 0 0 0.25rem;
+        }
+
+        .admissions-card__sub {
+            margin: 0 0 1.45rem;
+            font-size: 0.9rem;
+            color: var(--ink-500);
+        }
+
+        .admission-form {
+            display: grid;
+            gap: 1.05rem;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 0.35rem;
+        }
+
+        .form-label {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--ink-900);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.78rem 0.95rem;
+            font-family: var(--font-sans);
+            font-size: 0.96rem;
+            color: var(--ink-900);
+            background-color: var(--white);
+            border: 1.5px solid #d4d4d8;
+            border-radius: var(--radius-sm);
+            transition: border-color 0.16s ease, box-shadow 0.16s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--blue-700);
+            box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14);
+        }
+
+        .form-input.is-invalid {
+            border-color: #dc2626;
+            background-color: #fef2f2;
+        }
+
+        .form-error {
+            min-height: 1.1em;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #dc2626;
+        }
+
+        .form-confirmation {
+            margin-top: 1.25rem;
+            padding: 1.1rem;
+            background: var(--blue-50);
+            border: 1px solid var(--blue-200);
+            border-radius: var(--radius-md);
+        }
+
+        .form-confirmation__title {
+            margin: 0 0 0.3rem;
+            font-weight: 800;
+            color: var(--blue-900);
+        }
+
+        .form-confirmation__text {
+            margin: 0 0 0.85rem;
+            font-size: 0.88rem;
+            color: var(--ink-700);
+        }
+
+        /* ==========================================================================
+       8. Footer
+       ========================================================================== */
+
+        .site-footer {
+            background-color: var(--blue-950);
+            color: rgba(255, 255, 255, 0.9);
+            padding-top: 3.5rem;
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr 0.9fr;
+            gap: 2.5rem;
+            padding-bottom: 2.75rem;
+        }
+
+        .brand--footer {
+            margin-bottom: 1rem;
+        }
+
+        .footer__school-name {
+            margin: 0;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .footer__school-sub {
+            margin: 0.1rem 0 0;
+            font-size: 0.82rem;
+            color: #bfdbfe;
+            font-weight: 600;
+        }
+
+        .footer__desc {
+            margin: 0;
+            max-width: 42ch;
+            font-size: 0.93rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer__heading {
+            margin: 0 0 0.95rem;
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #bfdbfe;
+        }
+
+        .footer__list,
+        .footer__links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 0.7rem;
+            font-size: 0.92rem;
+        }
+
+        .footer__list a,
+        .footer__links a {
+            color: var(--white);
+            transition: opacity 0.16s ease;
+        }
+
+        .footer__list a:hover,
+        .footer__links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+            background: rgba(0, 0, 0, 0.18);
+            padding-block: 1.1rem;
+            font-size: 0.86rem;
+        }
+
+        .footer__bottom-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer__bottom p {
+            margin: 0;
+        }
+
+        .footer__credit {
+            color: #fde68a;
+        }
+
+        /* ==========================================================================
+       9. Floating WhatsApp Button
+       ========================================================================== */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 150;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.78rem 1.2rem;
+            background-color: #15803d;
+            color: var(--white);
+            border: 2px solid var(--white);
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            box-shadow: 0 12px 28px rgba(15, 31, 75, 0.28);
+            transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .whatsapp-float:hover,
+        .whatsapp-float:focus-visible {
+            background-color: #166534;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 34px rgba(15, 31, 75, 0.34);
+            outline: none;
+        }
+
+        .whatsapp-float svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 1520px) {
+            .footer__bottom {
+                padding-bottom: 4.75rem;
+            }
+        }
+
+        /* ==========================================================================
+       Responsive Breakpoints
+       ========================================================================== */
+
+        @media (max-width: 980px) {
+
+            .hero__grid,
+            .about__layout,
+            .why__layout,
+            .admissions__layout {
+                grid-template-columns: 1fr;
+            }
+
+            .programs-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .carousel-slide {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel-slide__content {
+                border-left: 0;
+                border-top: 1px solid var(--border-light);
+            }
+
+            .footer__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                width: min(1160px, 100% - 1.75rem);
+            }
+
+            .top-bar__badge,
+            .top-bar__call-label,
+            .top-bar__location .top-bar__sep {
+                display: none;
+            }
+
+            .hero-photo-frame::before {
+                inset: -6px -6px auto auto;
+                width: 72px;
+                height: 72px;
+            }
+
+            .top-bar__inner {
+                font-size: 0.8rem;
+            }
+
+            .header__cta {
+                display: none;
+            }
+
+            .hero__facts {
+                grid-template-columns: 1fr;
+                gap: 0.7rem;
+            }
+
+            .programs-grid,
+            .footer__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero__actions .btn {
+                width: 100%;
+            }
+
+            .whatsapp-float {
+                right: 16px;
+                bottom: 16px;
+                width: 56px;
+                height: 56px;
+                padding: 0;
+                justify-content: center;
+            }
+
+            .whatsapp-float__label {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container top-bar__inner">
+            <div class="top-bar__location">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="currentColor"
+                        stroke-width="1.8" />
+                    <circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.8" />
+                </svg>
+                <span>Gudu / Apo, Abuja</span>
+                <span class="top-bar__sep" aria-hidden="true">&bull;</span>
+                <span class="top-bar__badge">Admission Is On (Creche &ndash; Secondary)</span>
+            </div>
+
+            <div class="top-bar__phones" aria-label="Admissions phone numbers">
+                <span class="top-bar__call-label">Admissions &amp; Inquiries:</span>
+                <a href="tel:+2349131632024" class="top-bar__link">
+                    <svg class="icon-xs" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path
+                            d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    0913 163 2024
+                </a>
+                <span class="top-bar__sep" aria-hidden="true">/</span>
+                <a href="tel:+2349030454197" class="top-bar__link">0903 045 4197</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="site-header" id="top">
+        <div class="container header__inner">
+            <a href="#top" class="brand" aria-label="Dikrisa International School Home">
+                <svg class="brand__crest" viewBox="0 0 48 54" fill="none" aria-hidden="true">
+                    <path d="M24 3L43 9.5V25.5C43 37.5 34.8 46.7 24 51C13.2 46.7 5 37.5 5 25.5V9.5L24 3Z" fill="#1D4ED8"
+                        stroke="#1E3A8A" stroke-width="2" />
+                    <path d="M24 7L39 12.2V25.2C39 34.9 32.5 42.3 24 46.1C15.5 42.3 9 34.9 9 25.2V12.2L24 7Z"
+                        fill="#FFFFFF" />
+                    <path d="M24 11L35 14.8V24.9C35 32.5 30.2 38.4 24 41.5C17.8 38.4 13 32.5 13 24.9V14.8L24 11Z"
+                        fill="#1D4ED8" />
+                    <path
+                        d="M17.5 22.5C19.8 21.5 22 22 24 23.6C26 22 28.2 21.5 30.5 22.5V31.5C28.2 30.5 26 31 24 32.5C22 31 19.8 30.5 17.5 31.5V22.5Z"
+                        fill="#FFFFFF" />
+                    <path d="M24 23.6V32.5" stroke="#1D4ED8" stroke-width="1.5" />
+                    <path
+                        d="M24 15.2L25.1 17.7L27.8 17.9L25.7 19.7L26.3 22.3L24 20.9L21.7 22.3L22.3 19.7L20.2 17.9L22.9 17.7L24 15.2Z"
+                        fill="#FBBF24" />
+                </svg>
+                <div class="brand__text">
+                    <span class="brand__name">Dikrisa International School</span>
+                    <span class="brand__sub">Gudu / Apo, Abuja &middot; Creche to Secondary</span>
+                </div>
+            </a>
+
+            <nav class="nav" aria-label="Primary navigation">
+                <a href="#about" class="nav__link">About</a>
+                <a href="#programs" class="nav__link">Programs</a>
+                <a href="#why-dikrisa" class="nav__link">Why Choose Us</a>
+                <a href="#admissions" class="nav__link">Admissions</a>
+                <a href="#contact" class="nav__link">Contact</a>
+            </nav>
+
+            <div class="header__actions">
+                <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
+                    class="btn btn--primary btn--sm header__cta">
+                    Apply on WhatsApp
+                </a>
+                <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false"
+                    aria-controls="mobileMenu" aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Side Navigation Drawer (outside header so fixed positioning spans full screen) -->
+    <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+    <aside class="side-drawer" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="side-drawer__header">
+            <div class="side-drawer__brand">
+                <svg class="brand__crest" viewBox="0 0 48 54" fill="none" aria-hidden="true">
+                    <path d="M24 3L43 9.5V25.5C43 37.5 34.8 46.7 24 51C13.2 46.7 5 37.5 5 25.5V9.5L24 3Z" fill="#1D4ED8"
+                        stroke="#1E3A8A" stroke-width="2" />
+                    <path d="M24 7L39 12.2V25.2C39 34.9 32.5 42.3 24 46.1C15.5 42.3 9 34.9 9 25.2V12.2L24 7Z"
+                        fill="#FFFFFF" />
+                    <path d="M24 11L35 14.8V24.9C35 32.5 30.2 38.4 24 41.5C17.8 38.4 13 32.5 13 24.9V14.8L24 11Z"
+                        fill="#1D4ED8" />
+                    <path
+                        d="M17.5 22.5C19.8 21.5 22 22 24 23.6C26 22 28.2 21.5 30.5 22.5V31.5C28.2 30.5 26 31 24 32.5C22 31 19.8 30.5 17.5 31.5V22.5Z"
+                        fill="#FFFFFF" />
+                    <path d="M24 23.6V32.5" stroke="#1D4ED8" stroke-width="1.5" />
+                    <path
+                        d="M24 15.2L25.1 17.7L27.8 17.9L25.7 19.7L26.3 22.3L24 20.9L21.7 22.3L22.3 19.7L20.2 17.9L22.9 17.7L24 15.2Z"
+                        fill="#FBBF24" />
+                </svg>
+                <div>
+                    <span class="side-drawer__title">Dikrisa International</span>
+                    <span class="side-drawer__sub">Gudu / Apo, Abuja</span>
+                </div>
+            </div>
+            <button type="button" class="side-drawer__close" id="drawerClose" aria-label="Close navigation menu">
+                <svg class="icon-md" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <nav class="side-drawer__nav">
+            <a href="#about" class="side-drawer__link">About Dikrisa <span aria-hidden="true">&rsaquo;</span></a>
+            <a href="#programs" class="side-drawer__link">Our Programs <span aria-hidden="true">&rsaquo;</span></a>
+            <a href="#why-dikrisa" class="side-drawer__link">Why Parents Choose Us <span
+                    aria-hidden="true">&rsaquo;</span></a>
+            <a href="#admissions" class="side-drawer__link">Admission Form <span aria-hidden="true">&rsaquo;</span></a>
+            <a href="#contact" class="side-drawer__link">Contact &amp; Location <span
+                    aria-hidden="true">&rsaquo;</span></a>
+        </nav>
+
+        <div class="side-drawer__footer">
+            <div class="side-drawer__phones">
+                Call Admissions: <a href="tel:+2349131632024">0913 163 2024</a> / <a href="tel:+2349030454197">0903 045
+                    4197</a>
+            </div>
+            <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
+                class="btn btn--primary btn--full">
+                Apply Now on WhatsApp
+            </a>
+            <a href="tel:+2349131632024" class="btn btn--outline btn--full">
+                Call 0913 163 2024
+            </a>
+        </div>
+    </aside>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="hero">
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <div class="eyebrow-pill">
+                        <span class="pulse-dot" aria-hidden="true"></span>
+                        <span>Admission Is On! &middot; Nursery to Secondary</span>
+                    </div>
+
+                    <h1 class="hero__title">
+                        A School Where Your Child <span class="text-blue">Thrives</span>
+                    </h1>
+
+                    <p class="hero__subtitle">
+                        Admission is open for <strong>Creche, Nursery, Primary &amp; Secondary</strong> at
+                        Dikrisa International School, Gudu/Apo, Abuja &mdash; where your child is known, cared
+                        for, and prepared for moral and academic excellence.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
+                            class="btn btn--primary btn--lg">
+                            <svg class="icon-md" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.26-1.38a9.88 9.88 0 0 0 4.78 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2Zm5.76 14.08c-.24.67-1.4 1.29-1.93 1.37-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.18-4.95-4.37-.14-.2-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.26-.29.58-.36.77-.36h.56c.18 0 .42-.07.66.5.24.59.82 2.04.89 2.19.07.15.12.32.02.52-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.14.15-.3.31-.13.61.18.29.78 1.29 1.68 2.09 1.15 1.03 2.13 1.35 2.42 1.5.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.19-.29.39-.24.65-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.34.07.12.07.7-.17 1.37Z" />
+                            </svg>
+                            Apply Now on WhatsApp
+                        </a>
+                        <a href="#admissions" class="btn btn--outline btn--lg">
+                            Fill Admission Form
+                        </a>
+                    </div>
+
+                    <div class="hero__facts" aria-label="School highlights">
+                        <div class="hero-fact">
+                            <strong>Creche &ndash; Secondary</strong>
+                            <span>Seamless all-through schooling</span>
+                        </div>
+                        <div class="hero-fact">
+                            <strong>Small Class Sizes</strong>
+                            <span>Personal teacher attention</span>
+                        </div>
+                        <div class="hero-fact">
+                            <strong>Gudu / Apo, Abuja</strong>
+                            <span>Safe, serene campus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="hero-photo-frame">
+                        <img src="assets/images/hero-students.jpg"
+                            alt="Smiling students of Dikrisa International School in crisp white and royal blue school uniforms on campus in Abuja"
+                            class="hero-photo-frame__img" width="800" height="600" />
+                        <div class="hero-photo-card">
+                            <div class="hero-photo-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 3 2 8l10 5 10-5-10-5Zm-6 8.5v4.8c0 1.8 2.7 3.2 6 3.2s6-1.4 6-3.2v-4.8"
+                                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="hero-photo-card__title">Now Enrolling for New Term</p>
+                                <p class="hero-photo-card__meta">Book a tour &bull; 0913 163 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section class="section section--tinted" id="about">
+            <div class="container">
+                <div class="about__layout">
+                    <div class="about__media">
+                        <div class="editorial-frame">
+                            <img src="assets/images/about-classroom.jpg"
+                                alt="Qualified teacher guiding primary pupils in a bright classroom at Dikrisa International School"
+                                class="editorial-frame__img" loading="lazy" width="800" height="600" />
+                            <div class="editorial-frame__caption">
+                                Focused classroom attention in Gudu/Apo, Abuja
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about__content">
+                        <span class="section-eyebrow">About Dikrisa International School</span>
+                        <h2 class="section-title">
+                            &ldquo;A school where your child is known, cared for, and prepared for the future.&rdquo;
+                        </h2>
+                        <p class="section-lead">
+                            Parents in Abuja choose Dikrisa because we combine structured academics with genuine
+                            warmth and strong moral upbringing. Every child receives attentive guidance in a calm,
+                            well-organized learning environment from their earliest years through secondary school.
+                        </p>
+
+                        <div class="pillars-grid">
+                            <article class="pillar-card">
+                                <div class="pillar-card__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0ZM4 20c0-3.3 3.6-5.5 8-5.5s8 2.2 8 5.5"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="pillar-card__title">Qualified Teachers</h3>
+                                    <p class="pillar-card__text">
+                                        Trained, caring educators who spot every child&rsquo;s strengths early and
+                                        support
+                                        them step by step.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="pillar-card">
+                                <div class="pillar-card__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 3 4 6.5V12c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6.5L12 3Z"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                                        <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="pillar-card__title">Safe &amp; Conducive Environment</h3>
+                                    <p class="pillar-card__text">
+                                        Clean, bright classrooms and supervised grounds in Gudu/Apo built for peace of
+                                        mind and focus.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="pillar-card">
+                                <div class="pillar-card__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M12 3.5 14.4 8.4l5.4.8-3.9 3.8.9 5.4L12 15.8l-4.8 2.6.9-5.4-3.9-3.8 5.4-.8L12 3.5Z"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="pillar-card__title">Moral + Academic Excellence</h3>
+                                    <p class="pillar-card__text">
+                                        Strong literacy, numeracy, and STEM paired with discipline, honesty, and
+                                        respectful character.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Programs Section -->
+        <section class="section" id="programs">
+            <div class="container">
+                <div class="section-header section-header--split">
+                    <div>
+                        <span class="section-eyebrow">Academic Stages</span>
+                        <h2 class="section-title">Programs From Creche to Secondary</h2>
+                    </div>
+                    <p class="section-header__note">
+                        Four carefully structured stages that grow with your child under one trusted school roof
+                        in Abuja.
+                    </p>
+                </div>
+
+                <div class="programs-grid">
+                    <article class="program-card">
+                        <div class="program-card__head">
+                            <span class="program-card__tag">Ages 3 Months &ndash; 2 Years</span>
+                            <span class="program-card__num">01</span>
+                        </div>
+                        <h3 class="program-card__title">Creche</h3>
+                        <p class="program-card__text">
+                            Loving, hygienic daytime care for infants and toddlers with warm caregivers, sensory
+                            play, gentle routines, and safe rest areas.
+                        </p>
+                        <a href="#admissions" class="program-card__link" data-select-class="Creche">
+                            Inquire for Creche &rarr;
+                        </a>
+                    </article>
+
+                    <article class="program-card">
+                        <div class="program-card__head">
+                            <span class="program-card__tag">Ages 2 &ndash; 5 Years</span>
+                            <span class="program-card__num">02</span>
+                        </div>
+                        <h3 class="program-card__title">Nursery</h3>
+                        <p class="program-card__text">
+                            Phonics-based early reading, number sense, creative art, and social confidence built
+                            through joyful, hands-on classroom discovery.
+                        </p>
+                        <a href="#admissions" class="program-card__link" data-select-class="Nursery (Nursery 1 - 2)">
+                            Inquire for Nursery &rarr;
+                        </a>
+                    </article>
+
+                    <article class="program-card">
+                        <div class="program-card__head">
+                            <span class="program-card__tag">Primary 1 &ndash; 6</span>
+                            <span class="program-card__num">03</span>
+                        </div>
+                        <h3 class="program-card__title">Primary</h3>
+                        <p class="program-card__text">
+                            Solid mastery of English, Mathematics, Basic Science, ICT, and moral values in small
+                            classes where no pupil is left behind.
+                        </p>
+                        <a href="#admissions" class="program-card__link" data-select-class="Primary (Primary 1 - 6)">
+                            Inquire for Primary &rarr;
+                        </a>
+                    </article>
+
+                    <article class="program-card">
+                        <div class="program-card__head">
+                            <span class="program-card__tag">JSS 1 &ndash; SSS 3</span>
+                            <span class="program-card__num">04</span>
+                        </div>
+                        <h3 class="program-card__title">Secondary</h3>
+                        <p class="program-card__text">
+                            Rigorous Junior and Senior Secondary learning focused on Sciences, Arts, Commercial
+                            subjects, leadership, and WAEC/NECO readiness.
+                        </p>
+                        <a href="#admissions" class="program-card__link"
+                            data-select-class="Junior Secondary (JSS 1 - 3)">
+                            Inquire for Secondary &rarr;
+                        </a>
+                    </article>
+                </div>
+
+                <!-- Interactive Campus & Learning Carousel -->
+                <div class="campus-carousel" id="campusCarousel" aria-roledescription="carousel"
+                    aria-label="Dikrisa International School campus highlights">
+                    <div class="campus-carousel__topbar">
+                        <div>
+                            <span class="campus-carousel__label">Inside Dikrisa Campus</span>
+                            <h3 class="campus-carousel__heading">Life &amp; Learning Across Every Stage</h3>
+                        </div>
+                        <div class="campus-carousel__controls">
+                            <button type="button" class="carousel-btn" id="carouselPrev" aria-label="Previous slide">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <span class="campus-carousel__counter" id="carouselCounter" aria-live="polite">01 /
+                                04</span>
+                            <button type="button" class="carousel-btn" id="carouselNext" aria-label="Next slide">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2.2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="campus-carousel__viewport">
+                        <div class="campus-carousel__track" id="carouselTrack">
+                            <article class="carousel-slide" aria-hidden="false">
+                                <div class="carousel-slide__media">
+                                    <img src="assets/images/early-years.jpg"
+                                        alt="Nursery pupils learning with colorful counting blocks and a caring teacher at Dikrisa International School"
+                                        width="800" height="600" />
+                                </div>
+                                <div class="carousel-slide__content">
+                                    <span class="carousel-slide__badge">Creche &amp; Nursery</span>
+                                    <h4 class="carousel-slide__title">Warm Early Discovery</h4>
+                                    <p class="carousel-slide__text">
+                                        Safe, sunlit early-years rooms where toddlers and nursery pupils learn phonics,
+                                        counting, and joyful social habits under attentive caregivers.
+                                    </p>
+                                    <a href="#admissions" class="carousel-slide__cta"
+                                        data-select-class="Nursery (Nursery 1 - 2)">
+                                        Inquire for Creche &amp; Nursery &rarr;
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="carousel-slide" aria-hidden="true">
+                                <div class="carousel-slide__media">
+                                    <img src="assets/images/about-classroom.jpg"
+                                        alt="Primary school teacher guiding pupils in royal blue sweaters and white collars at wooden desks"
+                                        width="800" height="600" />
+                                </div>
+                                <div class="carousel-slide__content">
+                                    <span class="carousel-slide__badge">Primary 1 &ndash; 6</span>
+                                    <h4 class="carousel-slide__title">Small Classes, Personal Care</h4>
+                                    <p class="carousel-slide__text">
+                                        Trained teachers know every child personally, building strong reading, maths,
+                                        and character foundations without overcrowded classrooms.
+                                    </p>
+                                    <a href="#admissions" class="carousel-slide__cta"
+                                        data-select-class="Primary (Primary 1 - 6)">
+                                        Inquire for Primary &rarr;
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="carousel-slide" aria-hidden="true">
+                                <div class="carousel-slide__media">
+                                    <img src="assets/images/secondary-academics.jpg"
+                                        alt="Secondary students in crisp white shirts and royal blue ties conducting science lab work"
+                                        width="800" height="600" />
+                                </div>
+                                <div class="carousel-slide__content">
+                                    <span class="carousel-slide__badge">JSS 1 &ndash; SSS 3</span>
+                                    <h4 class="carousel-slide__title">Secondary STEM &amp; Exam Focus</h4>
+                                    <p class="carousel-slide__text">
+                                        Structured Junior and Senior Secondary learning in Sciences, Arts, and
+                                        Commercial subjects preparing students for WAEC, NECO, and leadership.
+                                    </p>
+                                    <a href="#admissions" class="carousel-slide__cta"
+                                        data-select-class="Junior Secondary (JSS 1 - 3)">
+                                        Inquire for Secondary &rarr;
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="carousel-slide" aria-hidden="true">
+                                <div class="carousel-slide__media">
+                                    <img src="assets/images/hero-students.jpg"
+                                        alt="Smiling Nigerian students in white and royal blue uniforms standing in the Dikrisa campus courtyard"
+                                        width="800" height="600" />
+                                </div>
+                                <div class="carousel-slide__content">
+                                    <span class="carousel-slide__badge">Gudu / Apo, Abuja</span>
+                                    <h4 class="carousel-slide__title">A Trusted Campus Community</h4>
+                                    <p class="carousel-slide__text">
+                                        Clean, serene grounds where siblings grow together from Creche through
+                                        Secondary in discipline, warmth, and academic pride.
+                                    </p>
+                                    <a href="#admissions" class="carousel-slide__cta">
+                                        Book a Campus Visit &rarr;
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="campus-carousel__dots" id="carouselDots" role="tablist"
+                        aria-label="Choose a campus slide">
+                        <button type="button" class="carousel-dot is-active" data-slide="0" role="tab"
+                            aria-selected="true" aria-label="Slide 1: Creche and Nursery"></button>
+                        <button type="button" class="carousel-dot" data-slide="1" role="tab" aria-selected="false"
+                            aria-label="Slide 2: Primary Classrooms"></button>
+                        <button type="button" class="carousel-dot" data-slide="2" role="tab" aria-selected="false"
+                            aria-label="Slide 3: Secondary Academics"></button>
+                        <button type="button" class="carousel-dot" data-slide="3" role="tab" aria-selected="false"
+                            aria-label="Slide 4: Campus Community"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Why Parents Choose Dikrisa Section -->
+        <section class="section section--blue" id="why-dikrisa">
+            <div class="container why__layout">
+                <div class="why__intro">
+                    <span class="section-eyebrow section-eyebrow--light">Why Parents Choose Dikrisa</span>
+                    <h2 class="section-title section-title--light">
+                        Quality Abuja Education Without Compromise
+                    </h2>
+                    <p class="why__lead">
+                        Choosing the right school is one of the most important decisions you make for your
+                        family. Here is what sets Dikrisa International School apart for parents across Gudu,
+                        Apo, and neighbouring Abuja districts.
+                    </p>
+                    <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
+                        class="btn btn--white btn--lg">
+                        Schedule a Campus Visit
+                    </a>
+                </div>
+
+                <ul class="why-list">
+                    <li class="why-item">
+                        <span class="why-item__check" aria-hidden="true">&#10003;</span>
+                        <div>
+                            <h3>Small Class Sizes</h3>
+                            <p>
+                                Focused teacher-to-pupil ratios ensure every child is actively engaged, understood,
+                                and given timely help.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="why-item">
+                        <span class="why-item__check" aria-hidden="true">&#10003;</span>
+                        <div>
+                            <h3>Caring, Accessible Teachers</h3>
+                            <p>
+                                Warm educators who communicate openly with parents and celebrate steady growth in
+                                both character and academics.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="why-item">
+                        <span class="why-item__check" aria-hidden="true">&#10003;</span>
+                        <div>
+                            <h3>Affordable, Transparent Fees</h3>
+                            <p>
+                                Premium private-school instruction and care at family-friendly fees with clear
+                                communication from day one.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="why-item">
+                        <span class="why-item__check" aria-hidden="true">&#10003;</span>
+                        <div>
+                            <h3>Creche, Nursery, Primary &amp; Secondary</h3>
+                            <p>
+                                Convenient single-campus continuity so siblings learn together and transition smoothly
+                                across stages.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="why-item">
+                        <span class="why-item__check" aria-hidden="true">&#10003;</span>
+                        <div>
+                            <h3>Located in Gudu / Apo, Abuja</h3>
+                            <p>
+                                Easily reachable for morning drop-offs and afternoon pick-ups across Gudu, Apo,
+                                Durumi, and Lokogoma.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. Admissions Section & WhatsApp Form -->
+        <section class="section section--tinted" id="admissions">
+            <div class="container admissions__layout">
+                <div class="admissions__info">
+                    <span class="section-eyebrow">Admissions Inquiry</span>
+                    <h2 class="section-title">Start Your Child&rsquo;s Application Today</h2>
+                    <p class="section-lead">
+                        Enrolment is currently open for Creche, Nursery, Primary, and Secondary classes. Fill in
+                        your child&rsquo;s details and send your inquiry directly to our Admissions Office on
+                        WhatsApp for prompt fee details and a school visit schedule.
+                    </p>
+
+                    <ol class="admissions-steps">
+                        <li>
+                            <span class="admissions-steps__num">1</span>
+                            <div>
+                                <strong>Enter your details</strong>
+                                <p>Share parent name, child&rsquo;s name, class applying for, and phone number.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="admissions-steps__num">2</span>
+                            <div>
+                                <strong>Send directly to WhatsApp</strong>
+                                <p>Your inquiry opens ready-to-send to our school line <strong>0913 163 2024</strong>.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="admissions-steps__num">3</span>
+                            <div>
+                                <strong>Visit our Gudu/Apo campus</strong>
+                                <p>Meet our teachers, tour the classrooms, and complete assessment &amp; registration.
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <div class="direct-call-box">
+                        <span class="direct-call-box__label">Prefer to speak with us right away?</span>
+                        <div class="direct-call-box__numbers">
+                            <a href="tel:+2349131632024">0913 163 2024</a>
+                            <span>&bull;</span>
+                            <a href="tel:+2349030454197">0903 045 4197</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admissions-card">
+                    <div class="admissions-card__accent" aria-hidden="true"></div>
+                    <div class="admissions-card__body">
+                        <h3 class="admissions-card__title">Admission Inquiry Form</h3>
+                        <p class="admissions-card__sub">
+                            Instant WhatsApp connection &mdash; response within school hours.
+                        </p>
+
+                        <form id="admissionForm" class="admission-form" novalidate>
+                            <div class="form-group">
+                                <label for="parentName" class="form-label">Parent / Guardian Name</label>
+                                <input type="text" id="parentName" name="parentName" class="form-input"
+                                    placeholder="e.g. Mrs. Chidinma Okafor" required autocomplete="name" />
+                                <span class="form-error" id="parentNameError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="childName" class="form-label">Child&rsquo;s Full Name</label>
+                                <input type="text" id="childName" name="childName" class="form-input"
+                                    placeholder="e.g. David Okafor" required />
+                                <span class="form-error" id="childNameError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="childClass" class="form-label">Class Applying For</label>
+                                <select id="childClass" name="childClass" class="form-input form-select" required>
+                                    <option value="">Select a class / section</option>
+                                    <option value="Creche">Creche (Early Care)</option>
+                                    <option value="Nursery (Nursery 1 - 2)">Nursery (Nursery 1 &ndash; 2)</option>
+                                    <option value="Primary (Primary 1 - 6)">Primary (Primary 1 &ndash; 6)</option>
+                                    <option value="Junior Secondary (JSS 1 - 3)">Junior Secondary (JSS 1 &ndash; 3)
+                                    </option>
+                                    <option value="Senior Secondary (SSS 1 - 3)">Senior Secondary (SSS 1 &ndash; 3)
+                                    </option>
+                                </select>
+                                <span class="form-error" id="childClassError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="parentPhone" class="form-label">Parent Phone Number</label>
+                                <input type="tel" id="parentPhone" name="parentPhone" class="form-input"
+                                    placeholder="e.g. 0803 123 4567" required autocomplete="tel" />
+                                <span class="form-error" id="parentPhoneError" aria-live="polite"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--lg btn--full">
+                                <svg class="icon-md" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.26-1.38a9.88 9.88 0 0 0 4.78 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2Zm5.76 14.08c-.24.67-1.4 1.29-1.93 1.37-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.18-4.95-4.37-.14-.2-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.26-.29.58-.36.77-.36h.56c.18 0 .42-.07.66.5.24.59.82 2.04.89 2.19.07.15.12.32.02.52-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.14.15-.3.31-.13.61.18.29.78 1.29 1.68 2.09 1.15 1.03 2.13 1.35 2.42 1.5.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.19-.29.39-.24.65-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.34.07.12.07.7-.17 1.37Z" />
+                                </svg>
+                                Send Inquiry via WhatsApp
+                            </button>
+                        </form>
+
+                        <!-- Confirmation & Fallback Box -->
+                        <div class="form-confirmation" id="formConfirmation" hidden aria-live="polite">
+                            <p class="form-confirmation__title">Inquiry prepared for WhatsApp!</p>
+                            <p class="form-confirmation__text">
+                                If WhatsApp did not open automatically, click the button below to send your details to
+                                Dikrisa Admissions:
+                            </p>
+                            <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
+                                id="whatsappFallbackLink" class="btn btn--outline btn--full">
+                                Open WhatsApp Message
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 6. Contact & Footer -->
+    <footer class="site-footer" id="contact">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <div class="brand brand--footer">
+                    <svg class="brand__crest" viewBox="0 0 48 54" fill="none" aria-hidden="true">
+                        <path d="M24 3L43 9.5V25.5C43 37.5 34.8 46.7 24 51C13.2 46.7 5 37.5 5 25.5V9.5L24 3Z"
+                            fill="#FFFFFF" />
+                        <path d="M24 8L38 12.8V25.1C38 34.3 31.9 41.3 24 44.8C16.1 41.3 10 34.3 10 25.1V12.8L24 8Z"
+                            fill="#1E40AF" />
+                        <path
+                            d="M17.5 22.5C19.8 21.5 22 22 24 23.6C26 22 28.2 21.5 30.5 22.5V31.5C28.2 30.5 26 31 24 32.5C22 31 19.8 30.5 17.5 31.5V22.5Z"
+                            fill="#FFFFFF" />
+                        <path d="M24 23.6V32.5" stroke="#1E40AF" stroke-width="1.5" />
+                        <path
+                            d="M24 14.5L25.1 17L27.8 17.2L25.7 19L26.3 21.6L24 20.2L21.7 21.6L22.3 19L20.2 17.2L22.9 17L24 14.5Z"
+                            fill="#FBBF24" />
+                    </svg>
+                    <div>
+                        <p class="footer__school-name">Dikrisa International School</p>
+                        <p class="footer__school-sub">Abuja, Nigeria</p>
+                    </div>
+                </div>
+                <p class="footer__desc">
+                    A school where your child is known, cared for, and prepared for the future &mdash;
+                    offering Creche, Nursery, Primary, and Secondary education in Gudu/Apo, Abuja.
+                </p>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Contact &amp; Campus</h3>
+                <ul class="footer__list">
+                    <li>
+                        <strong>Address:</strong><br />
+                        Gudu / Apo, Abuja, FCT
+                    </li>
+                    <li>
+                        <strong>Admissions &amp; Office Lines:</strong><br />
+                        <a href="tel:+2349131632024">0913 163 2024</a><br />
+                        <a href="tel:+2349030454197">0903 045 4197</a>
+                    </li>
+                    <li>
+                        <strong>School Hours:</strong><br />
+                        Monday &ndash; Friday, 7:30 AM &ndash; 3:00 PM
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Quick Links</h3>
+                <ul class="footer__links">
+                    <li><a href="#about">About Dikrisa</a></li>
+                    <li><a href="#programs">Creche, Nursery, Primary &amp; Secondary</a></li>
+                    <li><a href="#why-dikrisa">Why Parents Choose Us</a></li>
+                    <li><a href="#admissions">Admission Form</a></li>
+                    <li>
+                        <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer">
+                            WhatsApp Admissions
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>&copy; <span id="currentYear">2026</span> Dikrisa International School, Abuja. All rights reserved.
+                </p>
+                <p class="footer__credit">Built by <strong>Osasenaga</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating WhatsApp Button -->
+    <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer" class="whatsapp-float"
+        id="whatsappFloat" aria-label="Chat with Dikrisa International School Admissions on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.26-1.38a9.88 9.88 0 0 0 4.78 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2Zm5.76 14.08c-.24.67-1.4 1.29-1.93 1.37-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.18-4.95-4.37-.14-.2-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.26-.29.58-.36.77-.36h.56c.18 0 .42-.07.66.5.24.59.82 2.04.89 2.19.07.15.12.32.02.52-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.14.15-.3.31-.13.61.18.29.78 1.29 1.68 2.09 1.15 1.03 2.13 1.35 2.42 1.5.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.19-.29.39-.24.65-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.34.07.12.07.7-.17 1.37Z" />
+        </svg>
+        <span class="whatsapp-float__label">Chat on WhatsApp</span>
+    </a>
+
+    <script>
+        (() => {
+            const WHATSAPP_NUMBER = "2349131632024";
+
+            // 1. Sticky Header Scroll State
+            const header = document.querySelector(".site-header");
+            const updateHeaderState = () => {
+                if (!header) return;
+                header.classList.toggle("is-scrolled", window.scrollY > 12);
+            };
+            window.addEventListener("scroll", updateHeaderState, { passive: true });
+            updateHeaderState();
+
+            // 2. Mobile Side Drawer Navigation
+            const menuToggle = document.getElementById("menuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const drawerBackdrop = document.getElementById("drawerBackdrop");
+            const drawerClose = document.getElementById("drawerClose");
+
+            if (menuToggle && mobileMenu && drawerBackdrop) {
+                const setDrawerState = (open) => {
+                    mobileMenu.classList.toggle("is-open", open);
+                    drawerBackdrop.classList.toggle("is-open", open);
+                    document.body.classList.toggle("drawer-open", open);
+                    menuToggle.setAttribute("aria-expanded", String(open));
+                    mobileMenu.setAttribute("aria-hidden", String(!open));
+                    drawerBackdrop.setAttribute("aria-hidden", String(!open));
+                };
+
+                menuToggle.addEventListener("click", () => {
+                    const isOpen = mobileMenu.classList.contains("is-open");
+                    setDrawerState(!isOpen);
+                    if (!isOpen && drawerClose) {
+                        drawerClose.focus();
+                    }
+                });
+
+                if (drawerClose) {
+                    drawerClose.addEventListener("click", () => {
+                        setDrawerState(false);
+                        menuToggle.focus();
+                    });
+                }
+
+                drawerBackdrop.addEventListener("click", () => setDrawerState(false));
+
+                mobileMenu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => setDrawerState(false));
+                });
+
+                document.addEventListener("keydown", (event) => {
+                    if (event.key === "Escape" && mobileMenu.classList.contains("is-open")) {
+                        setDrawerState(false);
+                        menuToggle.focus();
+                    }
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth > 980 && mobileMenu.classList.contains("is-open")) {
+                        setDrawerState(false);
+                    }
+                });
+            }
+
+            // 2b. Campus Highlights Carousel
+            const carousel = document.getElementById("campusCarousel");
+            const track = document.getElementById("carouselTrack");
+            const prevBtn = document.getElementById("carouselPrev");
+            const nextBtn = document.getElementById("carouselNext");
+            const counterEl = document.getElementById("carouselCounter");
+            const dotButtons = Array.from(document.querySelectorAll(".carousel-dot"));
+
+            if (carousel && track) {
+                const slides = Array.from(track.children);
+                const totalSlides = slides.length;
+                let activeIndex = 0;
+                let autoplayTimer = null;
+                const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+                const goToSlide = (index) => {
+                    activeIndex = ((index % totalSlides) + totalSlides) % totalSlides;
+                    track.style.transform = `translateX(-${activeIndex * 100}%)`;
+
+                    slides.forEach((slide, idx) => {
+                        slide.setAttribute("aria-hidden", String(idx !== activeIndex));
+                    });
+
+                    dotButtons.forEach((dot, idx) => {
+                        const isActive = idx === activeIndex;
+                        dot.classList.toggle("is-active", isActive);
+                        dot.setAttribute("aria-selected", String(isActive));
+                    });
+
+                    if (counterEl) {
+                        counterEl.textContent = `0${activeIndex + 1} / 0${totalSlides}`;
+                    }
+                };
+
+                const stopAutoplay = () => {
+                    if (autoplayTimer) {
+                        window.clearInterval(autoplayTimer);
+                        autoplayTimer = null;
+                    }
+                };
+
+                const startAutoplay = () => {
+                    if (prefersReducedMotion) return;
+                    stopAutoplay();
+                    autoplayTimer = window.setInterval(() => goToSlide(activeIndex + 1), 5500);
+                };
+
+                if (prevBtn) {
+                    prevBtn.addEventListener("click", () => {
+                        goToSlide(activeIndex - 1);
+                        startAutoplay();
+                    });
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener("click", () => {
+                        goToSlide(activeIndex + 1);
+                        startAutoplay();
+                    });
+                }
+
+                dotButtons.forEach((dot) => {
+                    dot.addEventListener("click", () => {
+                        const idx = Number(dot.getAttribute("data-slide") || 0);
+                        goToSlide(idx);
+                        startAutoplay();
+                    });
+                });
+
+                // Touch swipe support on mobile
+                let touchStartX = 0;
+                track.addEventListener("touchstart", (event) => {
+                    touchStartX = event.changedTouches[0].clientX;
+                }, { passive: true });
+
+                track.addEventListener("touchend", (event) => {
+                    const deltaX = event.changedTouches[0].clientX - touchStartX;
+                    if (Math.abs(deltaX) > 45) {
+                        goToSlide(deltaX < 0 ? activeIndex + 1 : activeIndex - 1);
+                        startAutoplay();
+                    }
+                }, { passive: true });
+
+                carousel.addEventListener("mouseenter", stopAutoplay);
+                carousel.addEventListener("mouseleave", startAutoplay);
+                carousel.addEventListener("focusin", stopAutoplay);
+                carousel.addEventListener("focusout", startAutoplay);
+
+                goToSlide(0);
+                startAutoplay();
+            }
+
+            // 3. Program Cards Pre-fill Class Selector
+            const classSelect = document.getElementById("childClass");
+            document.querySelectorAll("[data-select-class]").forEach((link) => {
+                link.addEventListener("click", () => {
+                    const targetClass = link.getAttribute("data-select-class");
+                    if (classSelect && targetClass) {
+                        classSelect.value = targetClass;
+                    }
+                });
+            });
+
+            // 4. Admissions Form -> WhatsApp Submission
+            const form = document.getElementById("admissionForm");
+            const parentNameInput = document.getElementById("parentName");
+            const childNameInput = document.getElementById("childName");
+            const parentPhoneInput = document.getElementById("parentPhone");
+            const confirmationBox = document.getElementById("formConfirmation");
+            const whatsappFallbackLink = document.getElementById("whatsappFallbackLink");
+
+            const setFieldError = (input, errorId, message) => {
+                const errorEl = document.getElementById(errorId);
+                if (errorEl) {
+                    errorEl.textContent = message;
+                }
+                if (input) {
+                    input.classList.toggle("is-invalid", Boolean(message));
+                }
+            };
+
+            const validatePhone = (rawValue) => {
+                const digits = rawValue.replace(/\D/g, "");
+                return digits.length >= 10 && digits.length <= 15;
+            };
+
+            if (form && parentNameInput && childNameInput && classSelect && parentPhoneInput) {
+                [
+                    [parentNameInput, "parentNameError"],
+                    [childNameInput, "childNameError"],
+                    [classSelect, "childClassError"],
+                    [parentPhoneInput, "parentPhoneError"],
+                ].forEach(([field, errorId]) => {
+                    field.addEventListener("input", () => setFieldError(field, errorId, ""));
+                    field.addEventListener("change", () => setFieldError(field, errorId, ""));
+                });
+
+                form.addEventListener("submit", (event) => {
+                    event.preventDefault();
+
+                    // Clear any previous validation errors before re-validating (handles browser autofill)
+                    setFieldError(parentNameInput, "parentNameError", "");
+                    setFieldError(childNameInput, "childNameError", "");
+                    setFieldError(classSelect, "childClassError", "");
+                    setFieldError(parentPhoneInput, "parentPhoneError", "");
+
+                    const parentName = parentNameInput.value.trim();
+                    const childName = childNameInput.value.trim();
+                    const childClass = classSelect.value.trim();
+                    const parentPhone = parentPhoneInput.value.trim();
+
+                    let hasError = false;
+
+                    if (!parentName) {
+                        setFieldError(parentNameInput, "parentNameError", "Please enter the parent or guardian name.");
+                        hasError = true;
+                    }
+                    if (!childName) {
+                        setFieldError(childNameInput, "childNameError", "Please enter your child's name.");
+                        hasError = true;
+                    }
+                    if (!childClass) {
+                        setFieldError(classSelect, "childClassError", "Please select the class applying for.");
+                        hasError = true;
+                    }
+                    if (!parentPhone) {
+                        setFieldError(parentPhoneInput, "parentPhoneError", "Please enter a valid phone number.");
+                        hasError = true;
+                    } else if (!validatePhone(parentPhone)) {
+                        setFieldError(
+                            parentPhoneInput,
+                            "parentPhoneError",
+                            "Please enter a complete Nigerian phone number (e.g. 0803 123 4567)."
+                        );
+                        hasError = true;
+                    }
+
+                    if (hasError) {
+                        const firstInvalid = form.querySelector(".is-invalid");
+                        if (firstInvalid) firstInvalid.focus();
+                        return;
+                    }
+
+                    const messageLines = [
+                        "Hello Dikrisa International School, Abuja.",
+                        "I would like to inquire about admission for my child:",
+                        "",
+                        `Parent Name: ${parentName}`,
+                        `Child Name: ${childName}`,
+                        `Class Applying For: ${childClass}`,
+                        `Parent Phone Number: ${parentPhone}`,
+                    ];
+
+                    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                        messageLines.join("\n")
+                    )}`;
+
+                    if (whatsappFallbackLink) {
+                        whatsappFallbackLink.setAttribute("href", whatsappUrl);
+                    }
+                    if (confirmationBox) {
+                        confirmationBox.hidden = false;
+                    }
+
+                    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+                });
+            }
+
+            // 5. Dynamic Footer Year
+            const yearEl = document.getElementById("currentYear");
+            if (yearEl) {
+                yearEl.textContent = String(new Date().getFullYear());
+            }
+        })();
+    </script>
+</body>
+
+</html>
