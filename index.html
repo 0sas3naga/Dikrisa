@@ -64,6 +64,8 @@
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 84px;
+            overflow-x: clip;
+            max-width: 100%;
         }
 
         body {
@@ -73,6 +75,7 @@
             background-color: var(--white);
             line-height: 1.6;
             overflow-x: clip;
+            max-width: 100%;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -192,15 +195,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 1.5rem;
+            gap: 1.25rem;
             min-height: 76px;
         }
 
         .brand {
             display: inline-flex;
             align-items: center;
-            gap: 0.85rem;
-            flex-shrink: 0;
+            gap: 0.8rem;
+            min-width: 0;
+            flex: 0 1 auto;
         }
 
         .brand__crest {
@@ -212,6 +216,7 @@
         .brand__text {
             display: flex;
             flex-direction: column;
+            min-width: 0;
         }
 
         .brand__name {
@@ -251,6 +256,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            flex-shrink: 0;
         }
 
         .menu-toggle {
@@ -674,6 +680,81 @@
         .section--blue {
             background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 58%, #142a6b 100%);
             color: var(--white);
+        }
+
+        /* ==========================================================================
+       3b. Statistical Highlights Band
+       ========================================================================== */
+
+        .stats-band {
+            background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 62%, #153184 100%);
+            color: var(--white);
+            padding-block: clamp(2.4rem, 4.5vw, 3.6rem);
+            border-block: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .stats-band__head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 1rem 2rem;
+            margin-bottom: 1.75rem;
+            flex-wrap: wrap;
+        }
+
+        .stats-band__title {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 2.7vw, 2.05rem);
+            line-height: 1.2;
+            margin: 0;
+            color: var(--white);
+        }
+
+        .stats-band__sub {
+            margin: 0;
+            max-width: 44ch;
+            font-size: 0.94rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-card {
+            padding: 1.3rem 1.25rem;
+            background: rgba(255, 255, 255, 0.09);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-top: 3px solid #93c5fd;
+            border-radius: var(--radius-md);
+            min-width: 0;
+        }
+
+        .stat-card__value {
+            display: block;
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 3.2vw, 2.65rem);
+            font-weight: 700;
+            line-height: 1.05;
+            color: var(--white);
+            margin-bottom: 0.4rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-card__label {
+            margin: 0 0 0.28rem;
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: #fde68a;
+        }
+
+        .stat-card__desc {
+            margin: 0;
+            font-size: 0.84rem;
+            line-height: 1.45;
+            color: rgba(255, 255, 255, 0.86);
         }
 
         .section-eyebrow {
@@ -1453,19 +1534,32 @@
 
         @media (max-width: 980px) {
 
+            .hero__content,
+            .hero__visual,
+            .about__media,
+            .about__content,
+            .why__intro,
+            .admissions__info,
+            .admissions-card,
+            .campus-carousel {
+                min-width: 0;
+                max-width: 100%;
+            }
+
             .hero__grid,
             .about__layout,
             .why__layout,
             .admissions__layout {
-                grid-template-columns: 1fr;
+                grid-template-columns: minmax(0, 1fr);
             }
 
+            .stats-grid,
             .programs-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .carousel-slide {
-                grid-template-columns: 1fr;
+                grid-template-columns: minmax(0, 1fr);
             }
 
             .carousel-slide__content {
@@ -1474,7 +1568,7 @@
             }
 
             .footer__grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .nav {
@@ -1488,7 +1582,7 @@
 
         @media (max-width: 640px) {
             .container {
-                width: min(1160px, 100% - 1.75rem);
+                width: min(1160px, 100% - 1.5rem);
             }
 
             .top-bar__badge,
@@ -1497,28 +1591,63 @@
                 display: none;
             }
 
-            .hero-photo-frame::before {
-                inset: -6px -6px auto auto;
-                width: 72px;
-                height: 72px;
+            .top-bar__inner {
+                font-size: 0.78rem;
+                gap: 0.35rem 0.75rem;
             }
 
-            .top-bar__inner {
-                font-size: 0.8rem;
+            .header__inner {
+                gap: 0.65rem;
+                min-height: 68px;
+            }
+
+            .brand {
+                gap: 0.6rem;
+                flex: 1 1 auto;
+            }
+
+            .brand__crest {
+                width: 34px;
+                height: 39px;
+            }
+
+            .brand__name {
+                font-size: 0.98rem;
+            }
+
+            .brand__sub {
+                font-size: 0.71rem;
+            }
+
+            .eyebrow-pill {
+                font-size: 0.76rem;
+                padding: 0.38rem 0.78rem;
+                max-width: 100%;
+            }
+
+            .hero-photo-frame::before {
+                inset: -5px -5px auto auto;
+                width: 56px;
+                height: 56px;
+                border-width: 3px;
             }
 
             .header__cta {
                 display: none;
             }
 
+            .hero__facts,
+            .programs-grid,
+            .footer__grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
             .hero__facts {
-                grid-template-columns: 1fr;
                 gap: 0.7rem;
             }
 
-            .programs-grid,
-            .footer__grid {
-                grid-template-columns: 1fr;
+            .stat-card {
+                padding: 1.05rem 0.9rem;
             }
 
             .hero__actions .btn {
@@ -1526,16 +1655,22 @@
             }
 
             .whatsapp-float {
-                right: 16px;
-                bottom: 16px;
-                width: 56px;
-                height: 56px;
+                right: 14px;
+                bottom: 14px;
+                width: 54px;
+                height: 54px;
                 padding: 0;
                 justify-content: center;
             }
 
             .whatsapp-float__label {
                 display: none;
+            }
+        }
+
+        @media (max-width: 340px) {
+            .stats-grid {
+                grid-template-columns: minmax(0, 1fr);
             }
         }
     </style>
@@ -1746,6 +1881,48 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1b. Statistical Highlights Band -->
+        <section class="stats-band" id="stats" aria-label="Dikrisa International School statistics">
+            <div class="container">
+                <div class="stats-band__head">
+                    <div>
+                        <span class="section-eyebrow section-eyebrow--light">Dikrisa at a Glance</span>
+                        <h2 class="stats-band__title">Measured Care &amp; Academic Focus</h2>
+                    </div>
+                    <p class="stats-band__sub">
+                        Thoughtful class sizes, dedicated educators, and complete educational continuity from early
+                        years through secondary school in Gudu/Apo, Abuja.
+                    </p>
+                </div>
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <span class="stat-card__value" data-count="4">4</span>
+                        <h3 class="stat-card__label">School Divisions</h3>
+                        <p class="stat-card__desc">Creche, Nursery, Primary &amp; Secondary under one roof</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-card__value" data-count="15" data-prefix="Max ">Max 15</span>
+                        <h3 class="stat-card__label">Pupils Per Class</h3>
+                        <p class="stat-card__desc">Small class sizes so every child gets noticed</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-card__value" data-count="100" data-suffix="%">100%</span>
+                        <h3 class="stat-card__label">Qualified Educators</h3>
+                        <p class="stat-card__desc">Vetted staff committed to moral &amp; academic growth</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-card__value" data-count="12" data-suffix="+">12+</span>
+                        <h3 class="stat-card__label">Core &amp; STEM Subjects</h3>
+                        <p class="stat-card__desc">Phonics, Maths, Sciences, ICT &amp; Character Education</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -2585,7 +2762,47 @@
                 });
             }
 
-            // 5. Dynamic Footer Year
+            // 5. Statistical Counter Animation
+            const statEls = Array.from(document.querySelectorAll(".stat-card__value[data-count]"));
+            const prefersReducedMotionStats = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            if (statEls.length && !prefersReducedMotionStats && "IntersectionObserver" in window) {
+                const animateStat = (el) => {
+                    const target = Number(el.getAttribute("data-count") || 0);
+                    const prefix = el.getAttribute("data-prefix") || "";
+                    const suffix = el.getAttribute("data-suffix") || "";
+                    const duration = 900;
+                    const start = performance.now();
+
+                    const step = (now) => {
+                        const progress = Math.min(1, (now - start) / duration);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        const current = Math.max(1, Math.round(target * eased));
+                        el.textContent = `${prefix}${current}${suffix}`;
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        } else {
+                            el.textContent = `${prefix}${target}${suffix}`;
+                        }
+                    };
+                    window.requestAnimationFrame(step);
+                };
+
+                const statsSection = document.getElementById("stats");
+                if (statsSection) {
+                    const observer = new IntersectionObserver((entries, obs) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                statEls.forEach(animateStat);
+                                obs.disconnect();
+                            }
+                        });
+                    }, { threshold: 0.2 });
+                    observer.observe(statsSection);
+                }
+            }
+
+            // 6. Dynamic Footer Year
             const yearEl = document.getElementById("currentYear");
             if (yearEl) {
                 yearEl.textContent = String(new Date().getFullYear());
