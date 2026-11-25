@@ -1528,9 +1528,132 @@
             }
         }
 
+        .about__cta {
+            margin-top: 1.25rem;
+        }
+
+        .why__actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .section--blue .btn--outline {
+            background-color: transparent;
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.72);
+        }
+
+        .section--blue .btn--outline:hover,
+        .section--blue .btn--outline:focus-visible {
+            background-color: rgba(255, 255, 255, 0.14);
+            border-color: var(--white);
+        }
+
+        .link-btn {
+            background: none;
+            border: 0;
+            padding: 0;
+            font-family: inherit;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        /* ==========================================================================
+       10. Admission Form Modal
+       ========================================================================== */
+
+        .admission-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 250;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(15, 31, 75, 0.62);
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.24s ease, visibility 0.24s ease;
+        }
+
+        .admission-modal.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        .admission-modal__dialog {
+            width: min(520px, 100%);
+            max-height: 92dvh;
+            overflow-y: auto;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 28px 60px rgba(15, 31, 75, 0.3);
+            transform: translateY(14px) scale(0.98);
+            transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .admission-modal.is-open .admission-modal__dialog {
+            transform: translateY(0) scale(1);
+        }
+
+        .admission-modal__header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.15rem;
+        }
+
+        .admission-modal__close {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+            background: var(--ivory);
+            color: var(--ink-900);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: background-color 0.16s ease, color 0.16s ease;
+        }
+
+        .admission-modal__close:hover,
+        .admission-modal__close:focus-visible {
+            background: var(--blue-50);
+            color: var(--blue-700);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .admission-modal,
+            .admission-modal__dialog {
+                transition: none;
+            }
+        }
+
         /* ==========================================================================
        Responsive Breakpoints
        ========================================================================== */
+
+        @media (max-width: 1120px) {
+            .nav {
+                gap: 1.05rem;
+            }
+
+            .nav__link {
+                font-size: 0.88rem;
+            }
+        }
 
         @media (max-width: 980px) {
 
@@ -1741,6 +1864,9 @@
             </nav>
 
             <div class="header__actions">
+                <button type="button" class="btn btn--outline btn--sm header__cta" data-open-admission>
+                    Admission
+                </button>
                 <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
                     class="btn btn--primary btn--sm header__cta">
                     Apply on WhatsApp
@@ -1802,8 +1928,11 @@
                 Call Admissions: <a href="tel:+2349131632024">0913 163 2024</a> / <a href="tel:+2349030454197">0903 045
                     4197</a>
             </div>
+            <button type="button" class="btn btn--primary btn--full" data-open-admission>
+                Open Admission Form
+            </button>
             <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
-                class="btn btn--primary btn--full">
+                class="btn btn--outline btn--full">
                 Apply Now on WhatsApp
             </a>
             <a href="tel:+2349131632024" class="btn btn--outline btn--full">
@@ -1841,9 +1970,9 @@
                             </svg>
                             Apply Now on WhatsApp
                         </a>
-                        <a href="#admissions" class="btn btn--outline btn--lg">
-                            Fill Admission Form
-                        </a>
+                        <button type="button" class="btn btn--outline btn--lg" data-open-admission>
+                            Open Admission Form
+                        </button>
                     </div>
 
                     <div class="hero__facts" aria-label="School highlights">
@@ -2007,6 +2136,12 @@
                                 </div>
                             </article>
                         </div>
+
+                        <div class="about__cta">
+                            <button type="button" class="btn btn--primary btn--sm" data-open-admission>
+                                Apply for Admission
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2037,9 +2172,10 @@
                             Loving, hygienic daytime care for infants and toddlers with warm caregivers, sensory
                             play, gentle routines, and safe rest areas.
                         </p>
-                        <a href="#admissions" class="program-card__link" data-select-class="Creche">
-                            Inquire for Creche &rarr;
-                        </a>
+                        <button type="button" class="program-card__link link-btn" data-open-admission
+                            data-select-class="Creche">
+                            Apply for Creche &rarr;
+                        </button>
                     </article>
 
                     <article class="program-card">
@@ -2052,9 +2188,10 @@
                             Phonics-based early reading, number sense, creative art, and social confidence built
                             through joyful, hands-on classroom discovery.
                         </p>
-                        <a href="#admissions" class="program-card__link" data-select-class="Nursery (Nursery 1 - 2)">
-                            Inquire for Nursery &rarr;
-                        </a>
+                        <button type="button" class="program-card__link link-btn" data-open-admission
+                            data-select-class="Nursery (Nursery 1 - 2)">
+                            Apply for Nursery &rarr;
+                        </button>
                     </article>
 
                     <article class="program-card">
@@ -2067,9 +2204,10 @@
                             Solid mastery of English, Mathematics, Basic Science, ICT, and moral values in small
                             classes where no pupil is left behind.
                         </p>
-                        <a href="#admissions" class="program-card__link" data-select-class="Primary (Primary 1 - 6)">
-                            Inquire for Primary &rarr;
-                        </a>
+                        <button type="button" class="program-card__link link-btn" data-open-admission
+                            data-select-class="Primary (Primary 1 - 6)">
+                            Apply for Primary &rarr;
+                        </button>
                     </article>
 
                     <article class="program-card">
@@ -2082,10 +2220,10 @@
                             Rigorous Junior and Senior Secondary learning focused on Sciences, Arts, Commercial
                             subjects, leadership, and WAEC/NECO readiness.
                         </p>
-                        <a href="#admissions" class="program-card__link"
+                        <button type="button" class="program-card__link link-btn" data-open-admission
                             data-select-class="Junior Secondary (JSS 1 - 3)">
-                            Inquire for Secondary &rarr;
-                        </a>
+                            Apply for Secondary &rarr;
+                        </button>
                     </article>
                 </div>
 
@@ -2130,10 +2268,10 @@
                                         Safe, sunlit early-years rooms where toddlers and nursery pupils learn phonics,
                                         counting, and joyful social habits under attentive caregivers.
                                     </p>
-                                    <a href="#admissions" class="carousel-slide__cta"
+                                    <button type="button" class="carousel-slide__cta link-btn" data-open-admission
                                         data-select-class="Nursery (Nursery 1 - 2)">
-                                        Inquire for Creche &amp; Nursery &rarr;
-                                    </a>
+                                        Apply for Creche &amp; Nursery &rarr;
+                                    </button>
                                 </div>
                             </article>
 
@@ -2150,10 +2288,10 @@
                                         Trained teachers know every child personally, building strong reading, maths,
                                         and character foundations without overcrowded classrooms.
                                     </p>
-                                    <a href="#admissions" class="carousel-slide__cta"
+                                    <button type="button" class="carousel-slide__cta link-btn" data-open-admission
                                         data-select-class="Primary (Primary 1 - 6)">
-                                        Inquire for Primary &rarr;
-                                    </a>
+                                        Apply for Primary &rarr;
+                                    </button>
                                 </div>
                             </article>
 
@@ -2170,10 +2308,10 @@
                                         Structured Junior and Senior Secondary learning in Sciences, Arts, and
                                         Commercial subjects preparing students for WAEC, NECO, and leadership.
                                     </p>
-                                    <a href="#admissions" class="carousel-slide__cta"
+                                    <button type="button" class="carousel-slide__cta link-btn" data-open-admission
                                         data-select-class="Junior Secondary (JSS 1 - 3)">
-                                        Inquire for Secondary &rarr;
-                                    </a>
+                                        Apply for Secondary &rarr;
+                                    </button>
                                 </div>
                             </article>
 
@@ -2190,9 +2328,9 @@
                                         Clean, serene grounds where siblings grow together from Creche through
                                         Secondary in discipline, warmth, and academic pride.
                                     </p>
-                                    <a href="#admissions" class="carousel-slide__cta">
-                                        Book a Campus Visit &rarr;
-                                    </a>
+                                    <button type="button" class="carousel-slide__cta link-btn" data-open-admission>
+                                        Open Admission Form &rarr;
+                                    </button>
                                 </div>
                             </article>
                         </div>
@@ -2226,10 +2364,15 @@
                         family. Here is what sets Dikrisa International School apart for parents across Gudu,
                         Apo, and neighbouring Abuja districts.
                     </p>
-                    <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
-                        class="btn btn--white btn--lg">
-                        Schedule a Campus Visit
-                    </a>
+                    <div class="why__actions">
+                        <button type="button" class="btn btn--white btn--lg" data-open-admission>
+                            Open Admission Form
+                        </button>
+                        <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
+                            class="btn btn--outline btn--lg">
+                            Schedule a Campus Visit
+                        </a>
+                    </div>
                 </div>
 
                 <ul class="why-list">
@@ -2343,19 +2486,21 @@
                             Instant WhatsApp connection &mdash; response within school hours.
                         </p>
 
-                        <form id="admissionForm" class="admission-form" novalidate>
+                        <form id="admissionForm" class="admission-form js-admission-form" novalidate>
                             <div class="form-group">
                                 <label for="parentName" class="form-label">Parent / Guardian Name</label>
                                 <input type="text" id="parentName" name="parentName" class="form-input"
                                     placeholder="e.g. Mrs. Chidinma Okafor" required autocomplete="name" />
-                                <span class="form-error" id="parentNameError" aria-live="polite"></span>
+                                <span class="form-error" id="parentNameError" data-error="parentName"
+                                    aria-live="polite"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="childName" class="form-label">Child&rsquo;s Full Name</label>
                                 <input type="text" id="childName" name="childName" class="form-input"
                                     placeholder="e.g. David Okafor" required />
-                                <span class="form-error" id="childNameError" aria-live="polite"></span>
+                                <span class="form-error" id="childNameError" data-error="childName"
+                                    aria-live="polite"></span>
                             </div>
 
                             <div class="form-group">
@@ -2370,14 +2515,16 @@
                                     <option value="Senior Secondary (SSS 1 - 3)">Senior Secondary (SSS 1 &ndash; 3)
                                     </option>
                                 </select>
-                                <span class="form-error" id="childClassError" aria-live="polite"></span>
+                                <span class="form-error" id="childClassError" data-error="childClass"
+                                    aria-live="polite"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="parentPhone" class="form-label">Parent Phone Number</label>
                                 <input type="tel" id="parentPhone" name="parentPhone" class="form-input"
                                     placeholder="e.g. 0803 123 4567" required autocomplete="tel" />
-                                <span class="form-error" id="parentPhoneError" aria-live="polite"></span>
+                                <span class="form-error" id="parentPhoneError" data-error="parentPhone"
+                                    aria-live="polite"></span>
                             </div>
 
                             <button type="submit" class="btn btn--primary btn--lg btn--full">
@@ -2390,14 +2537,14 @@
                         </form>
 
                         <!-- Confirmation & Fallback Box -->
-                        <div class="form-confirmation" id="formConfirmation" hidden aria-live="polite">
+                        <div class="form-confirmation" id="formConfirmation" data-confirmation hidden aria-live="polite">
                             <p class="form-confirmation__title">Inquiry prepared for WhatsApp!</p>
                             <p class="form-confirmation__text">
                                 If WhatsApp did not open automatically, click the button below to send your details to
                                 Dikrisa Admissions:
                             </p>
                             <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
-                                id="whatsappFallbackLink" class="btn btn--outline btn--full">
+                                id="whatsappFallbackLink" data-fallback-link class="btn btn--outline btn--full">
                                 Open WhatsApp Message
                             </a>
                         </div>
@@ -2489,6 +2636,87 @@
         </svg>
         <span class="whatsapp-float__label">Chat on WhatsApp</span>
     </a>
+
+    <!-- Admission Form Modal -->
+    <div class="admission-modal" id="admissionModal" role="dialog" aria-modal="true"
+        aria-labelledby="admissionModalTitle" aria-hidden="true">
+        <div class="admission-modal__dialog">
+            <div class="admissions-card__accent" aria-hidden="true"></div>
+            <div class="admissions-card__body">
+                <div class="admission-modal__header">
+                    <div>
+                        <h3 class="admissions-card__title" id="admissionModalTitle">Admission Application Form</h3>
+                        <p class="admissions-card__sub" style="margin-bottom: 0;">
+                            Dikrisa International School &bull; Gudu/Apo, Abuja
+                        </p>
+                    </div>
+                    <button type="button" class="admission-modal__close" id="admissionModalClose"
+                        aria-label="Close admission form">
+                        <svg class="icon-md" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <form id="modalAdmissionForm" class="admission-form js-admission-form" novalidate>
+                    <div class="form-group">
+                        <label for="modalParentName" class="form-label">Parent / Guardian Name</label>
+                        <input type="text" id="modalParentName" name="parentName" class="form-input"
+                            placeholder="e.g. Mrs. Chidinma Okafor" required autocomplete="name" />
+                        <span class="form-error" data-error="parentName" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalChildName" class="form-label">Child&rsquo;s Full Name</label>
+                        <input type="text" id="modalChildName" name="childName" class="form-input"
+                            placeholder="e.g. David Okafor" required />
+                        <span class="form-error" data-error="childName" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalChildClass" class="form-label">Class Applying For</label>
+                        <select id="modalChildClass" name="childClass" class="form-input form-select" required>
+                            <option value="">Select a class / section</option>
+                            <option value="Creche">Creche (Early Care)</option>
+                            <option value="Nursery (Nursery 1 - 2)">Nursery (Nursery 1 &ndash; 2)</option>
+                            <option value="Primary (Primary 1 - 6)">Primary (Primary 1 &ndash; 6)</option>
+                            <option value="Junior Secondary (JSS 1 - 3)">Junior Secondary (JSS 1 &ndash; 3)</option>
+                            <option value="Senior Secondary (SSS 1 - 3)">Senior Secondary (SSS 1 &ndash; 3)</option>
+                        </select>
+                        <span class="form-error" data-error="childClass" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalParentPhone" class="form-label">Parent Phone Number</label>
+                        <input type="tel" id="modalParentPhone" name="parentPhone" class="form-input"
+                            placeholder="e.g. 0803 123 4567" required autocomplete="tel" />
+                        <span class="form-error" data-error="parentPhone" aria-live="polite"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--lg btn--full">
+                        <svg class="icon-md" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.26-1.38a9.88 9.88 0 0 0 4.78 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2Zm5.76 14.08c-.24.67-1.4 1.29-1.93 1.37-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.18-4.95-4.37-.14-.2-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.26-.29.58-.36.77-.36h.56c.18 0 .42-.07.66.5.24.59.82 2.04.89 2.19.07.15.12.32.02.52-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.14.15-.3.31-.13.61.18.29.78 1.29 1.68 2.09 1.15 1.03 2.13 1.35 2.42 1.5.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.19-.29.39-.24.65-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.34.07.12.07.7-.17 1.37Z" />
+                        </svg>
+                        Send Inquiry via WhatsApp
+                    </button>
+                </form>
+
+                <div class="form-confirmation" data-confirmation hidden aria-live="polite">
+                    <p class="form-confirmation__title">Inquiry prepared for WhatsApp!</p>
+                    <p class="form-confirmation__text">
+                        If WhatsApp did not open automatically, click the button below to send your details to
+                        Dikrisa Admissions:
+                    </p>
+                    <a href="https://wa.me/2349131632024" target="_blank" rel="noopener noreferrer"
+                        data-fallback-link class="btn btn--outline btn--full">
+                        Open WhatsApp Message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         (() => {
@@ -2646,86 +2874,142 @@
                 startAutoplay();
             }
 
-            // 3. Program Cards Pre-fill Class Selector
-            const classSelect = document.getElementById("childClass");
-            document.querySelectorAll("[data-select-class]").forEach((link) => {
-                link.addEventListener("click", () => {
-                    const targetClass = link.getAttribute("data-select-class");
-                    if (classSelect && targetClass) {
-                        classSelect.value = targetClass;
+            // 3. Admission Modal & Class Pre-fill Triggers
+            const admissionModal = document.getElementById("admissionModal");
+            const admissionModalClose = document.getElementById("admissionModalClose");
+            const modalParentInput = document.getElementById("modalParentName");
+            const classSelects = Array.from(document.querySelectorAll('select[name="childClass"]'));
+            let lastAdmissionTrigger = null;
+
+            const setModalState = (open) => {
+                if (!admissionModal) return;
+                admissionModal.classList.toggle("is-open", open);
+                admissionModal.setAttribute("aria-hidden", String(!open));
+                document.body.classList.toggle("modal-open", open);
+
+                if (open) {
+                    if (mobileMenu && mobileMenu.classList.contains("is-open")) {
+                        mobileMenu.classList.remove("is-open");
+                        if (drawerBackdrop) drawerBackdrop.classList.remove("is-open");
+                        document.body.classList.remove("drawer-open");
+                        if (menuToggle) menuToggle.setAttribute("aria-expanded", "false");
+                    }
+                    if (modalParentInput) {
+                        window.setTimeout(() => modalParentInput.focus(), 60);
+                    }
+                } else if (lastAdmissionTrigger && typeof lastAdmissionTrigger.focus === "function") {
+                    lastAdmissionTrigger.focus();
+                    lastAdmissionTrigger = null;
+                }
+            };
+
+            document.querySelectorAll("[data-select-class]").forEach((trigger) => {
+                trigger.addEventListener("click", () => {
+                    const targetClass = trigger.getAttribute("data-select-class");
+                    if (targetClass) {
+                        classSelects.forEach((selectEl) => {
+                            selectEl.value = targetClass;
+                            const err = selectEl.closest("form")?.querySelector('[data-error="childClass"]');
+                            if (err) err.textContent = "";
+                            selectEl.classList.remove("is-invalid");
+                        });
                     }
                 });
             });
 
-            // 4. Admissions Form -> WhatsApp Submission
-            const form = document.getElementById("admissionForm");
-            const parentNameInput = document.getElementById("parentName");
-            const childNameInput = document.getElementById("childName");
-            const parentPhoneInput = document.getElementById("parentPhone");
-            const confirmationBox = document.getElementById("formConfirmation");
-            const whatsappFallbackLink = document.getElementById("whatsappFallbackLink");
+            document.querySelectorAll("[data-open-admission]").forEach((trigger) => {
+                trigger.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    lastAdmissionTrigger = trigger;
+                    setModalState(true);
+                });
+            });
 
-            const setFieldError = (input, errorId, message) => {
-                const errorEl = document.getElementById(errorId);
-                if (errorEl) {
-                    errorEl.textContent = message;
-                }
-                if (input) {
-                    input.classList.toggle("is-invalid", Boolean(message));
-                }
-            };
+            if (admissionModalClose) {
+                admissionModalClose.addEventListener("click", () => setModalState(false));
+            }
 
+            if (admissionModal) {
+                admissionModal.addEventListener("click", (event) => {
+                    if (event.target === admissionModal) {
+                        setModalState(false);
+                    }
+                });
+
+                document.addEventListener("keydown", (event) => {
+                    if (event.key === "Escape" && admissionModal.classList.contains("is-open")) {
+                        setModalState(false);
+                    }
+                });
+            }
+
+            // 4. Shared Admissions Form -> WhatsApp Submission
             const validatePhone = (rawValue) => {
                 const digits = rawValue.replace(/\D/g, "");
                 return digits.length >= 10 && digits.length <= 15;
             };
 
-            if (form && parentNameInput && childNameInput && classSelect && parentPhoneInput) {
+            const setupAdmissionForm = (form) => {
+                const container = form.parentElement;
+                const parentNameInput = form.querySelector('[name="parentName"]');
+                const childNameInput = form.querySelector('[name="childName"]');
+                const childClassInput = form.querySelector('[name="childClass"]');
+                const parentPhoneInput = form.querySelector('[name="parentPhone"]');
+                const confirmationBox = container?.querySelector("[data-confirmation]");
+                const whatsappFallbackLink = container?.querySelector("[data-fallback-link]");
+
+                if (!parentNameInput || !childNameInput || !childClassInput || !parentPhoneInput) return;
+
+                const setFieldError = (input, fieldName, message) => {
+                    const errorEl = form.querySelector(`[data-error="${fieldName}"]`);
+                    if (errorEl) errorEl.textContent = message;
+                    input.classList.toggle("is-invalid", Boolean(message));
+                };
+
                 [
-                    [parentNameInput, "parentNameError"],
-                    [childNameInput, "childNameError"],
-                    [classSelect, "childClassError"],
-                    [parentPhoneInput, "parentPhoneError"],
-                ].forEach(([field, errorId]) => {
-                    field.addEventListener("input", () => setFieldError(field, errorId, ""));
-                    field.addEventListener("change", () => setFieldError(field, errorId, ""));
+                    [parentNameInput, "parentName"],
+                    [childNameInput, "childName"],
+                    [childClassInput, "childClass"],
+                    [parentPhoneInput, "parentPhone"],
+                ].forEach(([field, fieldName]) => {
+                    field.addEventListener("input", () => setFieldError(field, fieldName, ""));
+                    field.addEventListener("change", () => setFieldError(field, fieldName, ""));
                 });
 
                 form.addEventListener("submit", (event) => {
                     event.preventDefault();
 
-                    // Clear any previous validation errors before re-validating (handles browser autofill)
-                    setFieldError(parentNameInput, "parentNameError", "");
-                    setFieldError(childNameInput, "childNameError", "");
-                    setFieldError(classSelect, "childClassError", "");
-                    setFieldError(parentPhoneInput, "parentPhoneError", "");
+                    setFieldError(parentNameInput, "parentName", "");
+                    setFieldError(childNameInput, "childName", "");
+                    setFieldError(childClassInput, "childClass", "");
+                    setFieldError(parentPhoneInput, "parentPhone", "");
 
                     const parentName = parentNameInput.value.trim();
                     const childName = childNameInput.value.trim();
-                    const childClass = classSelect.value.trim();
+                    const childClass = childClassInput.value.trim();
                     const parentPhone = parentPhoneInput.value.trim();
 
                     let hasError = false;
 
                     if (!parentName) {
-                        setFieldError(parentNameInput, "parentNameError", "Please enter the parent or guardian name.");
+                        setFieldError(parentNameInput, "parentName", "Please enter the parent or guardian name.");
                         hasError = true;
                     }
                     if (!childName) {
-                        setFieldError(childNameInput, "childNameError", "Please enter your child's name.");
+                        setFieldError(childNameInput, "childName", "Please enter your child's name.");
                         hasError = true;
                     }
                     if (!childClass) {
-                        setFieldError(classSelect, "childClassError", "Please select the class applying for.");
+                        setFieldError(childClassInput, "childClass", "Please select the class applying for.");
                         hasError = true;
                     }
                     if (!parentPhone) {
-                        setFieldError(parentPhoneInput, "parentPhoneError", "Please enter a valid phone number.");
+                        setFieldError(parentPhoneInput, "parentPhone", "Please enter a valid phone number.");
                         hasError = true;
                     } else if (!validatePhone(parentPhone)) {
                         setFieldError(
                             parentPhoneInput,
-                            "parentPhoneError",
+                            "parentPhone",
                             "Please enter a complete Nigerian phone number (e.g. 0803 123 4567)."
                         );
                         hasError = true;
@@ -2760,7 +3044,9 @@
 
                     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
                 });
-            }
+            };
+
+            document.querySelectorAll(".js-admission-form").forEach(setupAdmissionForm);
 
             // 5. Statistical Counter Animation
             const statEls = Array.from(document.querySelectorAll(".stat-card__value[data-count]"));
